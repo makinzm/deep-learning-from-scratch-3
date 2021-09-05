@@ -112,5 +112,14 @@ a = square(x)
 y = add(square(a), square(a))
 y.backward()
 
-print(y.data)
-print(x.grad)
+print(f"y: data is {y.data}")
+
+
+print(f"x: grad is {x.grad}")
+print(f"x: creator is {x.creator}")
+
+print(f"a: grad is {a.grad}")
+print(f"a: creator is {a.creator}")
+
+print(f"y: grad is {y.grad}")
+print(f"y: creator is {y.creator}")

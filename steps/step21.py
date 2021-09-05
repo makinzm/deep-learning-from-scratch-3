@@ -171,8 +171,8 @@ def mul(x0, x1):
 
 
 Variable.__add__ = add
-Variable.__radd__ = add
-Variable.__mul__ = mul
+#Variable.__radd__ = add
+#Variable.__mul__ = mul
 Variable.__rmul__ = mul
 
 x = Variable(np.array(2.0))

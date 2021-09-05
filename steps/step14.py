@@ -1,6 +1,5 @@
 import numpy as np
 
-
 class Variable:
     def __init__(self, data):
         if data is not None:
@@ -82,10 +81,19 @@ def add(x0, x1):
 x = Variable(np.array(3.0))
 y = add(x, x)
 y.backward()
-print(x.grad)
+print(f"x: grad is {x.grad}")
+print(f"x: creator is {x.creator}")
 
+print(f"y: grad is {y.grad}")
+print(f"y: creator is {y.creator}")
+
+print("-"*12)
 
 x = Variable(np.array(3.0))  # or x.cleargrad()
 y = add(add(x, x), x)
 y.backward()
-print(x.grad)
+print(f"x: grad is {x.grad}")
+print(f"x: creator is {x.creator}")
+
+print(f"y: grad is {y.grad}")
+print(f"y: creator is {y.creator}")
