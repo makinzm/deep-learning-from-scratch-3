@@ -13,6 +13,7 @@ if is_simple_core:
     from dezero.core_simple import setup_variable
 
 else:
+    #print("ORRARA")
     from dezero.core import Variable
     from dezero.core import Parameter
     from dezero.core import Function
