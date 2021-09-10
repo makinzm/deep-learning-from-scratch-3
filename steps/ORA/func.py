@@ -32,12 +32,13 @@ class Square(Function):
 
 A = Square()
 
-x = Variable(np.array(1.0))
-a = A(input=x)
-
-print(a.data)
-
-#print(Square().backward(500))
-#AttributeError
-
+x = Variable(np.array(2.0))
+a = A(x)
 print(A.backward(500))
+
+B=Square()
+B.input=Variable(np.array(2.0))
+print(B.backward(1))
+
+#print(Square().backward(1))
+#AttributeError
