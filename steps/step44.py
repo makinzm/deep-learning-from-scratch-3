@@ -10,6 +10,8 @@ np.random.seed(0)
 x = np.random.rand(100, 1)
 y = np.sin(2 * np.pi * x) + np.random.rand(100, 1)
 
+#np.random.seed(100) # これを入れると,Linearの関数の値が変わる
+
 l1 = L.Linear(10)
 l2 = L.Linear(1)
 
